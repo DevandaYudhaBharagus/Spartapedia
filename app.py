@@ -1,4 +1,6 @@
 import os
+import requests
+from bs4 import BeautifulSoup
 from os.path import join, dirname
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, jsonify
