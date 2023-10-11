@@ -17,7 +17,7 @@ db = client[DB_NAME]
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/', methods=['GET'])
 def home():
    return render_template("index.html")
 
@@ -29,7 +29,7 @@ def movie_post():
     comment_receive = request.form['comment_give']
 
     headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
-    data = requests.get(url_receive, headers=headers)
+    data = requests.get(url_receive,)
 
     soup = BeautifulSoup(data.text, 'html.parser')
 
