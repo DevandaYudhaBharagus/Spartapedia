@@ -17,9 +17,9 @@ db = client[DB_NAME]
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def home():
-   return render_template('index.html')
+   return render_template("index.html")
 
 @app.route("/movie", methods=["POST"])
 def movie_post():
